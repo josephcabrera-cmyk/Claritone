@@ -4,13 +4,13 @@ A wearable head-mounted assistive device for visually impaired users that detect
 
 Developed as a senior design project (ESE440/ESE441) at Stony Brook University, Spring 2025 – Spring 2026.
 
-![Board Photo](docs/images/board_photo.jpg)
+![Claritone PCB Top](docs/images/Claritone_Image_Top.png)
 
 ## System Overview
 
 Claritone combines multizone ToF ranging with camera-based object detection running on an STM32N6 neural-processing MCU. When an obstacle is identified, the system generates a spatialized audio tone through stereo speakers that conveys the object's location relative to the user.
 
-![Block Diagram](docs/images/block_diagram.png)
+![Block Diagram](docs/images/Claritone_Block_Diagram.png)
 
 ## Hardware
 
@@ -30,17 +30,21 @@ Claritone combines multizone ToF ranging with camera-based object detection runn
 | Debug | STLINK-V3MINIE via STDC14 header (SWD + VCP) |
 | Fabrication | JLCPCB (4-layer, ENIG finish) |
 
-![Board Render Front](docs/images/board_render_front.png)
-![Board Render Back](docs/images/board_render_back.png)
+![Claritone PCB Bottom](docs/images/Claritone_Image_Bottom.png)
 
 ## Folder Structure
 
 ```
 Claritone/
 ├── Appli/                  # Application firmware
-│   ├── ToF/                # VL53L7CX driver porting layer
-│   └── Spatial-Sound/      # Spatial audio algorithm
+│   ├── Inc/                # Header files
+│   ├── Src/                # Source files
+│   ├── Spatial-Sound/      # Spatial audio algorithm
+│   └── ToF/                # VL53L7CX driver porting layer
+│       └── Platform/       # MCU-specific I2C platform abstraction
 ├── FSBL/                   # First-stage bootloader
+│   ├── Inc/                # Header files
+│   └── Src/                # Source files
 ├── hardware/
 │   ├── schematic/          # Schematic PDFs
 │   └── bom/                # Bill of materials
