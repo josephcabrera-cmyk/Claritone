@@ -1,0 +1,41 @@
+Category,Item,Justification,Part Number,Qty,Unit Cost,Total Cost,Changes & Reasoning
+Processing,MCU,"Microcontroller for processing sensor data, camera vision (CV)",STM32N657X0H3Q,2,$20.58,$41.16,CHANGED: Swapped N655 -> N657 for Neural-ART NPU (Required for help with Computer Vision). Also matches our Dev board MCU now.
+Processing,High Speed Crystal (HSE),Master clock for camera module,ECS-250-10-33B-CKY-TR3,2,$0.39,$0.78,ADDED: Necessary for proper camera operation. UPDATED: Part number changed ECS-250-10-33B-CWN-TR → ECS-250-10-33B-CKY-TR3 per JLCPCB BOM.
+Processing,Low Speed Crystal (LSE),"Handles sleep mode for sensors, timekeeping",ABS07-32.768KHZ-T,2,$0.61,$1.22,"ADDED: Handles sleep modes for sensors, low power mode for device, small and inexpensive."
+Processing,Programmer,Allow for STM32N655L0H3Q programming,STLINK-V3MINIE,1,$11.74,$11.74,"ADDED: Need a specific programmer for the STM32N657X0H3Q bare MCU, not just a USB."
+Processing,Dev Board,"Testing, firmware writing prior to PCB completion",NUCLEO-N657X0-Q,1,$57.50,$57.50,
+Vision,Camera,Low distortion camera module,IMX335,2,$25.19,$50.38,
+Vision,ToF Sensors (Main board),Sensors for obstacle detection - FRONT,VL53L7CXV0GC/1,2,$7.88,$15.76,CHANGED: 1 on-board ToF sensor (front). Qty updated to reflect 2 assembled boards. Side/rear sensors are on SATEL breakouts (separate line item).
+Vision,ToF Sensors (Breakout),Sensors for obstacle detection - REAR / SIDES,SATEL-VL53L7 (2 pack),2,$18.45,$36.90,"ADDED: Donetski project description states ""multiple IR sensors positioned around the wearable device will detect ostactles in DIFFERENT DIRECTIONS!!! (front, sides and rear)"" "
+Power,LiPo Battery,Flat batteries for portability,KBT 3.7V (2 pack),1,$21.99,$21.99,
+Power,Buck Converter,Stable input power necessary,TPS62132RGTR,2,$1.93,$3.86,
+Power,P-MOSFET,Reverse polarity protection,DMG2301L-7,2,$0.26,$0.52,"ADDED: If the batteries are plugged in with the wrong orientation, the board will not be bricked"
+Power,Polyfuse,Device protection,MF-PSMF075X-2,2,$0.36,$0.72,ADDED: Protects against potential current surges
+Power,TVS Diode,ESD protection,SD05.TCT,2,$1.01,$2.02,ADDED: ESD from touching can damage the components
+Power,Power Inductor,Shielded power inductors - high current capabilty,DFE201612E-1R0M=P2,2,$0.24,$0.48,ADDED: Cheap and safer just to have these specific inductors in case lab-provided ones are insufficient. - L1
+Power,Power Inductor,Shielded power inductors - high current capabilty,XFL4020-222MEC,2,$1.55,$3.10,ADDED: Cheap and safer just to have these specific inductors in case lab-provided ones are insufficient. - L2
+Power,Charger IC,"Need 4.2V to fully charge LiPo cells, battery protection",MCP73831T-2ACI/OT,2,$0.76,$1.52,
+Power,LDO 1.8V,Needed for reference voltage,TPS7A2018PDBVR,2,$0.32,$0.64,"REMOVED 1.2V and 2.8V LDOs: The camera module only needs +3.3V, if we got the bare camera it would need these different voltages."
+Power,Slide Switch,Used for power on/off,OS102011MA1QN1,2,$1.14,$2.28,ADDED: Better than push button for power.
+Audio,Speakers,Audio output,CES-24208-18PM-X7,2,$3.87,$7.74,CHANGED: MUCH smaller - positioned on the headband above the ears
+Audio,Audio Amplifier,Speaker amplification,MAX98357AETE+T,4,$3.19,$12.76,"ADDED: STM32 needs help with amplification. Need one for left speaker, one for right speaker."
+Audio,Scroll Wheel,"Mute, change volume",SLLB510100,2,$3.95,$7.90,"CHANGED: Better scroll wheel, can mute by pushing it."
+Audio,Push Buttons,"User interface - adjust sensitivity, tone, power mode",B3F-3120,4,$0.33,$1.32,CHANGED: Need right angle for chassis
+Conn,Programmer Header,Header for the programmer,FTSH-107-01-L-DV-K-A,2,$3.21,$6.42,ADDED: Programmer must connect to our PCB with bare MCU.
+Conn,Camera Connector,PCB connector header for camera ribbon cable,1-1734248-5,2,$1.71,$3.42,ADDED: Connector on PCB for the camera. Preliminary PCB design included a similar custom connector
+Conn,Battery Connector,JST Connectors for the battery header,B2B-PH-K-S,4,$0.10,$0.40,ADDED: Batteries have JST connectors that must attach to the PCB
+Conn,Speaker Header,Easier speaker PCB connection,BM02B-SRSS-TB,4,$0.39,$1.56,"ADDED: Not strictly necessary, can just solder the wires together."
+Conn,Speaker Cable,Needs to be long enough to reach ears,A02SR02SR30K305B,5,$1.11,$5.55,"ADDED: Not strictly necessary, can just solder the wires together"
+Conn,MicroUSB Port,MicroUSB header for charging LiPo batteries,10118194-0001LF,2,$0.43,$0.86,CHANGED: Adafruit 1904 was not correct for our application.
+Conn,VL53L7 Header (Breakout), 9 pin header for breakout board,BM09B-GHS-TBT,6,$0.67,$4.02,ADDED: Connection for breakouts
+Conn,VL53L7 Cable (Breakout),Long enough cable to go to different spots on the head,20 Pairs 150mm,1,$9.49,$9.49,ADDED: Connection for breakouts around the headset
+Conn,MicroSD Slot,Connector/slot for MicroSD card on the PCB,DM3AT-SF-PEJM5,2,$3.00,$6.00,CHANGED: Adafruit 254 has unnecessary components.
+Misc,Ferrite Bead,STM32N657 power system,BLM18AG121SN1D,4,$0.10,$0.40,ADDED: Just in case lab does not have exact ferrite bead
+Misc,MicroUSB ESD Protection,Protection from hand ESD,USBLC6-2SC6,2,$0.36,$0.72,ADDED: ESD can damage the components
+Misc,MicroSD Card,"Debugging, also could help with audio output files",Sandisk Ultra 32GB,2,$11.99,$23.98,
+Misc,MicroUSB cable,For charging the LiPo batteries,USB to Micro USB,1,$4.99,$4.99,
+Misc,Headband,Wearable headband strap,-,2,$5.00,$10.00,
+Misc,Custom PCB,,JLCPCB,5,-,$83.94,
+,,,,,GRAND TOTAL:,$444.04,
+,,,,,,tax+fees not included,
+,,"JLCPCB PCBA: 5 PCBs fabricated, 2 assembled. On-board component quantities reflect ×2 assembled boards.",,,,,
