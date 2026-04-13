@@ -37,15 +37,13 @@ Claritone combines multizone ToF ranging with camera-based object detection runn
 
 ```
 Claritone/
+├── Appli/                  # Application firmware
+│   ├── ToF/                # VL53L7CX driver porting layer
+│   └── Spatial-Sound/      # Spatial audio algorithm
+├── FSBL/                   # First-stage bootloader
 ├── hardware/
 │   ├── schematic/          # Schematic PDFs
-│   ├── bom/                # Bill of materials
-│   └── fabrication/        # Gerbers, pick-and-place, fab notes
-├── firmware/
-│   ├── FSBL/               # First-stage bootloader
-│   └── Appli/              # Application firmware
-│       ├── ToF/            # VL53L7CX driver porting layer
-│       └── Spatial-Sound/  # Spatial audio algorithm
+│   └── bom/                # Bill of materials
 ├── docs/
 │   └── images/             # Photos, renders, block diagrams
 └── README.md
