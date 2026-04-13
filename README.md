@@ -32,6 +32,19 @@ Claritone combines multizone ToF ranging with camera-based object detection runn
 
 ![Claritone PCB Bottom](docs/images/Claritone_Image_Bottom.png)
 
+### Schematic
+
+![Schematic](hardware/schematic/Claritone_Schematic.png)
+
+Full schematic PDF: [Claritone_Schematic.pdf](hardware/schematic/Claritone_Schematic.pdf)
+
+### PCB Layout
+
+![PCB Top Copper](hardware/schematic/Claritone_PCB_TOP.png)
+![PCB Bottom Copper](hardware/schematic/Claritone_PCB_BOTTOM.png)
+
+Full layout PDFs: [Top](hardware/schematic/Claritone_PCB_TOP.pdf) | [Bottom](hardware/schematic/Claritone_PCB_BOTTOM.pdf)
+
 ## Folder Structure
 
 ```
