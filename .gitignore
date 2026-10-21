@@ -1,0 +1,36 @@
+# ---- STM32CubeIDE build output ----
+Debug/
+Release/
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+*.o
+*.d
+*.su
+*.cyclo
+
+# Workspace metadata (the per-project .project / .cproject files stay tracked)
+.metadata/
+
+# ---- ST VL53L7CX ULD driver (STSW-IMG036) ----
+# Not redistributable; see the License section of the README.
+VL53L7CX_ULD/
+
+# ---- Desktop spatial audio prototype ----
+Appli/Spatial-Sound/spatial_tone
+Appli/Spatial-Sound/spatial_tone.exe
+
+# ---- Autodesk EAGLE / Fusion Electronics backups and locks ----
+*.s#?
+*.b#?
+*.l#?
+*.lck
+
+# ---- Editors / OS ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
