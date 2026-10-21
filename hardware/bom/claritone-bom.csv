@@ -1,0 +1,41 @@
+Category,Item,Justification,Part Number,Qty,Unit Cost,Total Cost,Design Note
+Processing,MCU,"Microcontroller for processing sensor data, computer vision (CV)",STM32N657X0H3Q,2,$20.58,$41.16,N657 over the N655 for its Neural-ART NPU; same MCU as the NUCLEO dev board
+Processing,High Speed Crystal (HSE),Master clock for camera module,ECS-250-10-33B-CKY-TR3,2,$0.39,$0.78,"25 MHz HSE, needed for reliable camera operation; part number matches the JLCPCB assembly BOM"
+Processing,Low Speed Crystal (LSE),"Handles sleep mode for sensors, timekeeping",ABS07-32.768KHZ-T,2,$0.61,$1.22,32.768 kHz LSE for low-power modes and RTC timekeeping; small and inexpensive
+Processing,Programmer,Allow for STM32N657X0H3Q programming,STLINK-V3MINIE,1,$11.74,$11.74,Programs and debugs the bare MCU through the 14-pin STDC14 header
+Processing,Dev Board,"Testing, firmware writing prior to PCB completion",NUCLEO-N657X0-Q,1,$57.50,$57.50,"Same MCU as the custom board, so firmware written early carries over"
+Vision,Camera,Low distortion camera module,IMX335,2,$25.19,$50.38,Module form runs from 3.3 V alone; the bare sensor would need extra 1.2 V and 2.8 V rails
+Vision,ToF Sensors (Main board),Sensors for obstacle detection - FRONT,VL53L7CXV0GC/1,2,$7.88,$15.76,"One front-facing sensor per board, mounted on the main PCB"
+Vision,ToF Sensors (Breakout),Sensors for obstacle detection - REAR / SIDES,SATEL-VL53L7 (2 pack),2,$18.45,$36.90,"Side and rear sensors on breakouts, cabled out so they can sit around the headset"
+Power,LiPo Battery,Flat batteries for portability,KBT 3.7V (2 pack),1,$21.99,$21.99,Two 3000 mAh flat cells in parallel for 6000 mAh total
+Power,Buck Converter,Stable input power necessary,TPS62132RGTR,2,$1.93,$3.86,Steps the battery voltage down to the 3.3 V main rail
+Power,P-MOSFET,Reverse polarity protection,DMG2301L-7,2,$0.26,$0.52,Protects the board if a battery is plugged in backwards
+Power,Polyfuse,Device protection,MF-PSMF075X-2,2,$0.36,$0.72,Resettable fuse that trips on overcurrent
+Power,TVS Diode,ESD protection,SD05.TCT,2,$1.01,$2.02,Clamps ESD from handling before it reaches the components
+Power,Power Inductor,Shielded power inductors - high current capability,DFE201612E-1R0M=P2,2,$0.24,$0.48,L1 (1 µH): inductor for the MCU's internal SMPS core supply
+Power,Power Inductor,Shielded power inductors - high current capability,XFL4020-222MEC,2,$1.55,$3.10,L2 (2.2 µH): buck converter inductor on the 3.3 V rail
+Power,Charger IC,"Need 4.2V to fully charge LiPo cells, battery protection",MCP73831T-2ACI/OT,2,$0.76,$1.52,"4.2 V charge regulation (-2 variant) for the 1S pack, charged from Micro-USB"
+Power,LDO 1.8V,Needed for reference voltage,TPS7A2018PDBVR,2,$0.32,$0.64,1.8 V rail from 3.3 V; 1.2 V and 2.8 V LDOs dropped since the camera module regulates its own supplies
+Power,Slide Switch,Used for power on/off,OS102011MA1QN1,2,$1.14,$2.28,"Main power switch; holds its position, unlike a push button"
+Audio,Speakers,Audio output,CES-24208-18PM-X7,2,$3.87,$7.74,Small enough to sit on the headband above each ear
+Audio,Audio Amplifier,Speaker amplification,MAX98357AETE+T,4,$3.19,$12.76,"I2S Class-D amp, one per speaker so left and right are driven independently"
+Audio,Scroll Wheel,"Mute, change volume",SLLB510100,2,$3.95,$7.90,Volume control; pushing the wheel mutes
+Audio,Push Buttons,"User interface - adjust sensitivity, tone, power mode",B3F-3120,4,$0.33,$1.32,Right-angle so they mount through the enclosure wall
+Conn,Programmer Header,Header for the programmer,FTSH-107-01-L-DV-K-A,2,$3.21,$6.42,14-pin 1.27 mm STDC14 header for the STLINK-V3MINIE
+Conn,Camera Connector,PCB connector header for camera ribbon cable,1-1734248-5,2,$1.71,$3.42,15-pin FPC connector for the camera's MIPI CSI ribbon
+Conn,Battery Connector,JST Connectors for the battery header,B2B-PH-K-S,4,$0.10,$0.40,"JST PH to match the cells' connectors, one per cell"
+Conn,Speaker Header,Easier speaker PCB connection,BM02B-SRSS-TB,4,$0.39,$1.56,JST SH so the speakers plug in instead of being soldered
+Conn,Speaker Cable,Needs to be long enough to reach ears,A02SR02SR30K305B,5,$1.11,$5.55,Pre-crimped SH cables long enough to reach the ears
+Conn,MicroUSB Port,MicroUSB header for charging LiPo batteries,10118194-0001LF,2,$0.43,$0.86,Charging input only; no USB data
+Conn,VL53L7 Header (Breakout),9-pin header for breakout board,BM09B-GHS-TBT,6,$0.67,$4.02,JST GH header for each ToF breakout cable
+Conn,VL53L7 Cable (Breakout),Long enough cable to go to different spots on the head,20 Pairs 150mm,1,$9.49,$9.49,150 mm cables to reach sensor positions around the headset
+Conn,MicroSD Slot,Connector/slot for MicroSD card on the PCB,DM3AT-SF-PEJM5,2,$3.00,$6.00,"Bare slot on the MCU's SDMMC1 interface, without the extra parts on a breakout"
+Misc,Ferrite Bead,STM32N657 power system,BLM18AG121SN1D,4,$0.10,$0.40,Supply filtering for the STM32N657 power pins
+Misc,MicroUSB ESD Protection,Protection from hand ESD,USBLC6-2SC6,2,$0.36,$0.72,ESD protection on the Micro-USB lines
+Misc,MicroSD Card,"Debugging, also could help with audio output files",SanDisk Ultra 32GB,2,$11.99,$23.98,"Storage for debug logs, with room for audio files"
+Misc,MicroUSB cable,For charging the LiPo batteries,USB to Micro USB,1,$4.99,$4.99,Charging cable
+Misc,Headband,Wearable headband strap,-,2,$5.00,$10.00,Wearable strap that carries the electronics
+Misc,Custom PCB,,JLCPCB,5,-,$83.94,"4-layer FR-4, ENIG; 5 boards fabricated, 2 assembled by JLCPCB"
+,,,,,GRAND TOTAL:,$444.04,
+,,,,,,tax+fees not included,
+,,"JLCPCB PCBA: 5 PCBs fabricated, 2 assembled. On-board component quantities reflect ×2 assembled boards.",,,,,
