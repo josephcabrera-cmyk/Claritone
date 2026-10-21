@@ -90,7 +90,11 @@ Claritone/
 
 ## Team
 
-Built by a three-person team at Stony Brook University. Contributions span hardware design, firmware development, enclosure design, and audio algorithm development.
+Built by a three-person team at Stony Brook University:
+
+- **[Joseph Cabrera](https://github.com/josephcabrera-cmyk)**: schematic and 4-layer PCB design, board bring-up, ToF sensing architecture, and enclosure design
+- **Joseph** and **Sola**: firmware; each also developed a separate spatial audio algorithm
+- **Felix** and **Sola**: computer vision model selection and deployment on the Neural-ART NPU
 
 ## License
 
