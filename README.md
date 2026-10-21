@@ -25,6 +25,7 @@ Claritone combines multizone ToF ranging with camera-based object detection runn
 | Camera | Arducam IMX335 via 15-pin MIPI CSI FPC connector |
 | Audio output | 2x MAX98357A I2S Class-D amplifiers (stereo) |
 | Power | 2x 3000 mAh LiPo cells in parallel, MCP73831T charge management, TPS62132 buck (3.3V), TPS7A2018 LDO (1.8V) |
+| Protection | Battery reverse-polarity P-MOSFET (DMG2301L), resettable polyfuse (MF-PSMF075X), SD05 TVS diode, USBLC6-2SC6 ESD protection on Micro-USB |
 | Charging | Micro-USB (power only) |
 | Storage | MicroSD via SDMMC1 |
 | Debug | STLINK-V3MINIE via STDC14 header (SWD + VCP) |
