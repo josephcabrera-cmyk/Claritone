@@ -1,0 +1,5 @@
+# EAGLE sources are XML, but they must round-trip byte-exact, so leave
+# line endings alone and hand EAGLE the same file that was committed.
+*.sch -text
+*.brd -text
+*.lbr -text

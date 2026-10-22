@@ -62,6 +62,10 @@ Full schematic PDF: [Claritone_Schematic.pdf](hardware/schematic/Claritone_Schem
 
 Full layout PDFs: [Top](hardware/schematic/Claritone_PCB_TOP.pdf) | [Bottom](hardware/schematic/Claritone_PCB_BOTTOM.pdf)
 
+### Design files
+
+The EAGLE 9.7 sources are [`Claritone_Main.sch`](hardware/source/Claritone_Main.sch) and [`Claritone_Main.brd`](hardware/source/Claritone_Main.brd). They open in Autodesk EAGLE 9.7 or later and in Fusion Electronics.
+
 ### Bill of materials
 
 [`hardware/bom/claritone-bom.csv`](hardware/bom/claritone-bom.csv) lists every part with a one-line design note ([`.xlsx`](hardware/bom/claritone-bom.xlsx) version).
@@ -86,6 +90,7 @@ Claritone/
 ├── prototypes/
 │   └── spatial-audio/        # desktop prototype of the spatial audio engine
 ├── hardware/
+│   ├── source/               # EAGLE schematic and board files
 │   ├── schematic/            # schematic and layout PDFs and images
 │   └── bom/                  # bill of materials
 ├── docs/
