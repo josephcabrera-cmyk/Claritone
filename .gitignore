@@ -11,16 +11,29 @@ Release/
 *.su
 *.cyclo
 
-# Workspace metadata (the per-project .project / .cproject files stay tracked)
+# Workspace metadata
 .metadata/
+
+# ---- Files STM32CubeMX regenerates from each .ioc ----
+# Only application sources and .ioc files are tracked; see firmware/README.md.
+# Generated project files also record machine-specific paths.
+firmware/**/Drivers/
+firmware/**/Middlewares/
+firmware/**/Startup/
+firmware/**/.settings/
+firmware/**/.project
+firmware/**/.cproject
+firmware/**/.mxproject
+firmware/**/*.ld
+firmware/**/*.launch
 
 # ---- ST VL53L7CX ULD driver (STSW-IMG036) ----
 # Not redistributable; see the License section of the README.
 VL53L7CX_ULD/
 
 # ---- Desktop spatial audio prototype ----
-Appli/Spatial-Sound/spatial_tone
-Appli/Spatial-Sound/spatial_tone.exe
+prototypes/spatial-audio/spatial_tone
+prototypes/spatial-audio/spatial_tone.exe
 
 # ---- Autodesk EAGLE / Fusion Electronics backups and locks ----
 *.s#?
