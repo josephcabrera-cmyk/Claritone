@@ -1,6 +1,6 @@
-# Spatial Sound Prototype
+# Spatial Audio Prototype
 
-A desktop prototype of Claritone's spatial audio engine, written in C++ with [miniaudio](https://miniaud.io) for audio output. It plays a sine tone and places it around the listener using four cues:
+Sola's desktop prototype of Claritone's spatial audio engine, written in C++ with [miniaudio](https://miniaud.io) for audio output. It plays a sine tone and places it around the listener using four cues:
 
 - **Equal-power panning:** left and right gains of √(½(1 − p)) and √(½(1 + p)), where p = sin(azimuth)
 - **Head shadow:** the far ear is cut by up to 25% as the source moves to the side
@@ -8,6 +8,8 @@ A desktop prototype of Claritone's spatial audio engine, written in C++ with [mi
 - **Distance attenuation:** gain = (d<sub>near</sub> / d)<sup>rolloff</sup>, which is 1/d with the default rolloff of 1
 
 Direction and distance are set from the keyboard, standing in for sensor data.
+
+The engine is ported to the STM32N6 in [`firmware/Claritone_Main`](../../firmware/Claritone_Main), which feeds it the front ToF sensor. With only the front sensor working, it had no direction to place a sound in. The showcase build used the distance-to-tone mapping in [`firmware/Claritone_L7_Audio`](../../firmware/Claritone_L7_Audio) instead.
 
 ## Building
 
