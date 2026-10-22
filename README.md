@@ -2,7 +2,7 @@
 
 A head-mounted navigation aid for visually impaired users. Time-of-flight (ToF) sensors measure how far away obstacles are, and the device turns that distance into audio cues. The full design adds camera-based object detection and spatial audio. [Status at the showcase](#status-at-the-showcase) covers what actually ran.
 
-Developed as a senior design project (ESE440/ESE441) at Stony Brook University, Spring 2025 – Spring 2026.
+Developed as a senior design project (ESE440/ESE441) at Stony Brook University, Fall 2025 – Spring 2026.
 
 ![The assembled Claritone board with its speakers, camera module, LiPo pack, a SATEL-VL53L7 ToF breakout and the STLINK-V3MINIE debugger](docs/images/claritone-assembled.jpg)
 
