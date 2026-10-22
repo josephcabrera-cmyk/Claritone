@@ -80,7 +80,7 @@ The EAGLE 9.7 sources are [`Claritone_Main.sch`](hardware/source/Claritone_Main.
 
 ```
 Claritone/
-├── firmware/                 # STM32N657 firmware: sources and .ioc files
+├── firmware/                 # STM32N657 sources and .ioc files
 │   ├── Claritone_L0_Blinky/  # bring-up steps L0–L8, one project each
 │   ├── ...
 │   ├── Claritone_L7_Audio/   # showcase build
@@ -88,7 +88,7 @@ Claritone/
 │   ├── Claritone_Main/       # spatial audio engine and UI
 │   └── claritone-board.ioc   # board pin and peripheral configuration
 ├── prototypes/
-│   └── spatial-audio/        # desktop prototype of the spatial audio engine
+│   └── spatial-audio/        # desktop spatial audio prototype
 ├── hardware/
 │   ├── source/               # EAGLE schematic and board files
 │   ├── schematic/            # schematic and layout PDFs and images
